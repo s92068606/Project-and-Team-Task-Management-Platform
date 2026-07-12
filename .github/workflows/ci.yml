@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint API
+        run: npm run lint --workspace @cyphlab/api
+
+      - name: Lint web
+        run: npm run lint --workspace @cyphlab/web
+
+      - name: Build API
+        run: npm run build --workspace @cyphlab/api
+
+      - name: Build web
+        run: npm run build --workspace @cyphlab/web

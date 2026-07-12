@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+.next
+dist
+coverage
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+*.log
+apps/api/node_modules
+apps/api/dist
+apps/api/coverage
+apps/web/node_modules
+apps/web/.next
+apps/web/coverage
+prisma/dev.db
