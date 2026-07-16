@@ -10,5 +10,11 @@
     "build": "npm run build --workspace @cyphlab/api && npm run build --workspace @cyphlab/web",
     "dev": "npm run dev --workspace @cyphlab/api",
     "format": "npm run format --workspace @cyphlab/api && npm run format --workspace @cyphlab/web"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0"
+  },
+  "devDependencies": {
+    "prisma": "^7.8.0"
   }
 }
